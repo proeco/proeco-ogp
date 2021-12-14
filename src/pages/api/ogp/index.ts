@@ -17,7 +17,7 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
   const markup = ReactDOMServer.renderToStaticMarkup(element);
   const html = `<!doctype html>${markup}`;
 
-  await page.setContent(html, { waitUntil: 'domcontentloaded' });
+  await page.setContent(html, { waitUntil: 'load' });
 
   const image = await page.screenshot({ type: 'png' });
   await browser.close();
