@@ -1,4 +1,6 @@
+import fs from 'fs';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
 import * as playwright from 'playwright-aws-lambda';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
@@ -10,15 +12,23 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
 
    const browser = await playwright.launchChromium();
    
-  const page = await browser.newPage({ viewport });
+   const page = await browser.newPage({ viewport });
+   
+   const fontPath = path.resolve(
+    process.cwd(),
+    "./assets/NotoColorEmoji.ttf"
+   );
+   
+  const font = fs.readFileSync(fontPath, { encoding: "base64" });
 
-  const props = { title: title as string, teamName: teamName as string };
+  const props = { title: title as string, teamName: teamName as string, font };
   const element = React.createElement(StoryOgpTemplate, props);
   const markup = ReactDOMServer.renderToStaticMarkup(element);
   const html = `<!doctype html>${markup}`;
 
-  await page.setContent(html, { waitUntil: 'load' });
-
+   await page.setContent(html, { waitUntil: 'load' });
+   await page.evaluateHandle("document.fonts.ready");
+   
   const image = await page.screenshot({ type: 'png' });
   await browser.close();
 
