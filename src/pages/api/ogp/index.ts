@@ -4,12 +4,14 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
 
-
  const getOgp =  async (req: NextApiRequest, res: NextApiResponse) => {
   const { title, teamName } = req.query;
   const viewport = { width: 1200, height: 630 };
 
-  const browser = await playwright.launchChromium();
+   const browser = await playwright.launchChromium({
+     args: ['--lang=ja']
+   });
+   
   const page = await browser.newPage({ viewport });
 
   const props = { title: title as string, teamName: teamName as string };
@@ -17,6 +19,9 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
   const markup = ReactDOMServer.renderToStaticMarkup(element);
   const html = `<!doctype html>${markup}`;
 
+  await page.setExtraHTTPHeaders({
+    'Accept-Language': 'ja-JP'
+});
   await page.setContent(html, { waitUntil: 'load' });
 
   const image = await page.screenshot({ type: 'png' });
