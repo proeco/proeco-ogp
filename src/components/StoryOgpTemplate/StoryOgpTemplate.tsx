@@ -6,6 +6,7 @@ type Props = {
 };
 
 const css = `
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 html,
 body {
   margin: 0;
@@ -21,12 +22,7 @@ body {
   background-image: ${`url(${process.env.NEXT_PUBLIC_ROOT_URL}/images/story-ogp.png)`};
   background-size: cover;
   background-position: center center;
-  font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .teamInfo {
   position: absolute;

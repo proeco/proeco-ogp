@@ -8,9 +8,7 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
   const { title, teamName } = req.query;
   const viewport = { width: 1200, height: 630 };
 
-   const browser = await playwright.launchChromium({
-     args: ['--lang=ja']
-   });
+   const browser = await playwright.launchChromium();
    
   const page = await browser.newPage({ viewport });
 
@@ -19,9 +17,6 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
   const markup = ReactDOMServer.renderToStaticMarkup(element);
   const html = `<!doctype html>${markup}`;
 
-  await page.setExtraHTTPHeaders({
-    'Accept-Language': 'ja-JP'
-});
   await page.setContent(html, { waitUntil: 'load' });
 
   const image = await page.screenshot({ type: 'png' });
