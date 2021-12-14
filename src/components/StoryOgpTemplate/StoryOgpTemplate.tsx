@@ -18,7 +18,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: center;
-  background-image: ${`url(${process.env.NEXT_PUBLIC_ROOT_URL}/images/story-ogp.png)`};
+  background-image: url("https://proeco-ogp.vercel.app/images/story-ogp.png");
   background-size: cover;
   background-position: center center;
   font-family: "Helvetica Neue",
