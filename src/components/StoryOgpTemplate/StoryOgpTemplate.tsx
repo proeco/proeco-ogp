@@ -3,16 +3,15 @@ import React, { VFC } from 'react';
 type Props = {
   title: string;
   teamName: string;
-  font: string;
 };
 
-export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, font }) => {
+export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
 
-  const getCss = (font: string) => `
+  const css = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
   @font-face {
     font-family: 'Noto Color Emoji';
-    src: url(data:font/ttf;charset=utf-8;base64,${font}) format('truetype');
+    src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
     }
   html,
   body {
@@ -54,10 +53,9 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, font }) => {
   }
   `;
     
-
   return (
     <html>
-      <style dangerouslySetInnerHTML={{ __html: getCss(font) }} />
+      <style dangerouslySetInnerHTML={{ __html: css }} />
       <body>
         <div className="wrapper">
           <div className="teamInfo">

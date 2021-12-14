@@ -13,21 +13,14 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
    const browser = await playwright.launchChromium();
    
    const page = await browser.newPage({ viewport });
-   
-   const fontPath = path.resolve(
-    process.cwd(),
-    "./assets/NotoColorEmoji.ttf"
-   );
-   
-  const font = fs.readFileSync(fontPath, { encoding: "base64" });
+   page.setDefaultNavigationTimeout(110000);
 
-  const props = { title: title as string, teamName: teamName as string, font };
+  const props = { title: title as string, teamName: teamName as string };
   const element = React.createElement(StoryOgpTemplate, props);
   const markup = ReactDOMServer.renderToStaticMarkup(element);
   const html = `<!doctype html>${markup}`;
 
-   await page.setContent(html, { waitUntil: 'load' });
-   await page.evaluateHandle("document.fonts.ready");
+   await page.setContent(html, { waitUntil: "load" });
    
   const image = await page.screenshot({ type: 'png' });
   await browser.close();
