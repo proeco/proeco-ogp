@@ -21,6 +21,12 @@ body {
   background-image: ${`url(${process.env.NEXT_PUBLIC_ROOT_URL}/images/story-ogp.png)`};
   background-size: cover;
   background-position: center center;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
 .teamInfo {
   position: absolute;
@@ -31,10 +37,17 @@ body {
 }
 .teamName {
   font-size: 40px;
+  font-weight: bold;
 }
 .title {
+  font-size: 64px;
+  line-height: 1.2;
   padding-left: 80px;
   padding-right: 80px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 `;
 
