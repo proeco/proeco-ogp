@@ -9,7 +9,10 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
 
   const css = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-  @import url('https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf');
+  @font-face {
+    font-family: 'NotoColorEmoji';
+    src: url('https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf') format('truetype');
+    }
   html,
   body {
     margin: 0;
@@ -25,7 +28,7 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
     background-image: ${`url(${process.env.NEXT_PUBLIC_ROOT_URL}/images/story-ogp.png)`};
     background-size: cover;
     background-position: center center;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', 'NotoColorEmoji', sans-serif;
   }
   .teamInfo {
     position: absolute;
