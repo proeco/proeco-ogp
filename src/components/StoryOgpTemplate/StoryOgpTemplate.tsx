@@ -44,12 +44,12 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
   .title {
     font-size: 64px;
     line-height: 1.2;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 10px 80px;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    word-break: break-all;
   }
   `;
     
