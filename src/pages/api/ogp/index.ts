@@ -5,7 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
 
  const getOgp =  async (req: NextApiRequest, res: NextApiResponse) => {
-  const { title, teamName } = req.query;
+  const { title, teamName, teamIconUrl } = req.query;
    const viewport = { width: 1200, height: 630 };
 
    try {
@@ -14,7 +14,7 @@ import { StoryOgpTemplate } from '../../../components/StoryOgpTemplate';
      
     const page = await browser.newPage({ viewport });
   
-    const props = { title: title as string, teamName: teamName as string };
+    const props = { title: title as string, teamName: teamName as string , teamIconUrl: teamIconUrl as string};
     const element = React.createElement(StoryOgpTemplate, props);
     const markup = ReactDOMServer.renderToStaticMarkup(element);
     const html = `<!doctype html>${markup}`;

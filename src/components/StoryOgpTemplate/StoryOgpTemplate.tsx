@@ -1,11 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 
 type Props = {
   title: string;
   teamName: string;
+  teamIconUrl: string;
 };
 
-export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
+export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) => {
 
   const css = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
@@ -36,6 +38,24 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
     left: 80px;
     display: flex;
     align-items: center;
+    gap: 8px;
+  }
+  .teamIcon {
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .teamIcon > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .teamName {
     font-size: 40px;
@@ -59,6 +79,9 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName }) => {
       <body>
         <div className="wrapper">
           <div className="teamInfo">
+            <div className='teamIcon'>
+              <img src={teamIconUrl} alt="teamIconUrl" />
+            </div>
             <p className="teamName">{teamName}</p>
           </div>
           <div className="title">
