@@ -1,0 +1,16 @@
+{
+  "extends": ["config:base", "group:definitelyTyped"],
+  "schedule": ["every weekend"],
+  "timezone": "Asia/Tokyo",
+  "prConcurrentLimit": 10,
+  "major": {
+    "stabilityDays": 7
+  },
+  "minor": {
+    "stabilityDays": 3
+  },
+  "patch": {
+    "stabilityDays": 2
+  },
+  "separateMinorPatch": true
+}
