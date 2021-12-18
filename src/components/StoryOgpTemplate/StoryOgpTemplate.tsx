@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 
 type Props = {
@@ -8,7 +7,6 @@ type Props = {
 };
 
 export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) => {
-
   const css = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
   @font-face {
@@ -72,21 +70,19 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) =
     word-break: break-all;
   }
   `;
-    
+
   return (
     <html>
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <body>
         <div className="wrapper">
           <div className="teamInfo">
-            <div className='teamIcon'>
+            <div className="teamIcon">
               <img src={teamIconUrl} alt="teamIconUrl" />
             </div>
             <p className="teamName">{teamName}</p>
           </div>
-          <div className="title">
-            {title}
-          </div>
+          <div className="title">{title}</div>
         </div>
       </body>
     </html>
