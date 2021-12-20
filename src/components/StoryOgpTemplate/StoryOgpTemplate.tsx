@@ -45,6 +45,8 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) =
     height: 60px;
     border-radius: 50%;
     z-index: 1;
+    margin-right: 4px;
+    border: 2px solid #6684F7;
   }
   .teamIcon > img {
     position: absolute;
