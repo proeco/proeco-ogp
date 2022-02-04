@@ -73,6 +73,9 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) =
   }
   `;
 
+  const decodeTitle = decodeURIComponent(title);
+  const decodeTeamName = decodeURIComponent(teamName);
+
   return (
     <html>
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -82,9 +85,9 @@ export const StoryOgpTemplate: VFC<Props> = ({ title, teamName, teamIconUrl }) =
             <div className="teamIcon">
               <img src={teamIconUrl} alt="teamIconUrl" />
             </div>
-            <p className="teamName">{teamName}</p>
+            <p className="teamName">{decodeTeamName}</p>
           </div>
-          <div className="title">{title}</div>
+          <div className="title">{decodeTitle}</div>
         </div>
       </body>
     </html>
