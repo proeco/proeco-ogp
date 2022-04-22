@@ -11,7 +11,7 @@
   "dependencies": {
     "next": "12.1.5",
     "playwright-aws-lambda": "0.7.0",
-    "playwright-core": "1.21.0",
+    "playwright-core": "1.21.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "styled-components": "5.3.5"
