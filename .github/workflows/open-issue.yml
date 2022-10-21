@@ -10,7 +10,7 @@ jobs:
   move-assigned-card:
     runs-on: ubuntu-18.04
     steps:
-      - uses: alex-page/github-project-automation-plus@be108970955040d35dd6d053c3aff3faaf678026
+      - uses: alex-page/github-project-automation-plus@1f8873e97e3c8f58161a323b7c568c1f623a1c4d
         with:
           project: Proeco Dev
           column: 🧐 Open
