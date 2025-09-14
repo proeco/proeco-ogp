@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.5.2",
+    "next": "15.5.3",
     "playwright-aws-lambda": "0.11.0",
     "playwright-core": "1.55.0",
     "react": "19.1.1",
@@ -22,7 +22,7 @@
     "@types/react-dom": "18.3.7",
     "eslint": "9.34.0",
     "@typescript-eslint/eslint-plugin": "7.18.0",
-    "eslint-config-next": "15.5.2",
+    "eslint-config-next": "15.5.3",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-config-prettier": "10.1.8",
     "prettier": "3.6.2",
