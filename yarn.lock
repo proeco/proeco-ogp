@@ -3072,10 +3072,10 @@ playwright-aws-lambda@0.11.0:
   dependencies:
     lambdafs "^2.1.1"
 
-playwright-core@1.57.0:
-  version "1.57.0"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.57.0.tgz#3dcc9a865af256fa9f0af0d67fc8dd54eecaebf5"
-  integrity sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==
+playwright-core@1.58.0:
+  version "1.58.0"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.58.0.tgz#f0c74217837e5dda1ecfae78e214fe97112c1f97"
+  integrity sha512-aaoB1RWrdNi3//rOeKuMiS65UCcgOVljU46At6eFcOFPFHWtd2weHRRow6z/n+Lec0Lvu0k9ZPKJSjPugikirw==
 
 possible-typed-array-names@^1.0.0:
   version "1.1.0"
