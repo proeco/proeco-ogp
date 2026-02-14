@@ -21,7 +21,7 @@
     "@types/react": "18.3.28",
     "@types/react-dom": "18.3.7",
     "eslint": "9.39.2",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/eslint-plugin": "8.54.0",
     "eslint-config-next": "16.1.6",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-config-prettier": "10.1.8",
