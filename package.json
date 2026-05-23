@@ -14,7 +14,7 @@
     "playwright-core": "1.60.0",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "styled-components": "6.4.1"
+    "styled-components": "6.4.2"
   },
   "devDependencies": {
     "@types/node": "22.19.19",
