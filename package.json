@@ -20,7 +20,7 @@
     "@types/node": "22.19.21",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
-    "eslint": "9.39.4",
+    "eslint": "10.4.1",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "eslint-config-next": "16.2.9",
     "eslint-plugin-prettier": "5.5.6",
