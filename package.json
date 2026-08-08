@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.5.22",
+    "next": "15.5.23",
     "playwright-aws-lambda": "0.11.0",
     "playwright-core": "1.62.1",
     "react": "19.2.8",
