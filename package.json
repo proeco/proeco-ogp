@@ -17,7 +17,7 @@
     "styled-components": "6.5.3"
   },
   "devDependencies": {
-    "@types/node": "22.20.2",
+    "@types/node": "22.20.3",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
     "eslint": "9.39.5",
