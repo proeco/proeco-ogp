@@ -492,10 +492,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.5.28.tgz#baeca1a42e756f461b676ff7efdb0bc9d6f6de44"
   integrity sha512-xxW5EBI8fMPuVTPBW7LL980IRbuDXlbkUAwp9DDhtb4Lnich3nJ13uYpvrX4VE74hWPf6AvHHAMmGCidcHjbfg==
 
-"@next/eslint-plugin-next@16.4.1":
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-16.4.1.tgz#c7f5ef847d818840a012de32b46bed57b43d32ba"
-  integrity sha512-2io6M+wAqe7nT5mt2gEVy6FOzye2DmwhjaYCpSvHfrIKL11SXNTwSARxpPHJacRmfgSBSDnNmnEXSp0DaJ23BQ==
+"@next/eslint-plugin-next@16.4.2":
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-16.4.2.tgz#74a371f9ced5c112fca9874a96732693e65d168c"
+  integrity sha512-gCTWlw0e+Y6kajpFyKKgA195jUJCRhlzJE0lV7ufe8a+ghIsANWZ0/FiJwg6DuOG1+OvRbcZDcFBoRh3mNJx0g==
   dependencies:
     "@eslint-community/eslint-utils" "4.9.1"
     fast-glob "3.3.1"
@@ -1618,12 +1618,12 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@16.4.1:
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-16.4.1.tgz#448e826219965c4dc393f7229d8dc76ca2820848"
-  integrity sha512-6AsojbCfRdpWkP6BIUnMBv3MH4OvtfmH9p4hSfLh8ZgsW7nfhu7DpUMNBB7leisDyyMz+YYxTc+NAdBOQfovlA==
+eslint-config-next@16.4.2:
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-16.4.2.tgz#07439d6c863980072e36238ac994b26d04df30b4"
+  integrity sha512-P33vjcETMXc+qBjpF77TeJHZLzk6cPcTy8KjpxLucYB3mCIFIORMcZ+cBXcAiIYjE5RM7jyknEEOwMNdnx/ADQ==
   dependencies:
-    "@next/eslint-plugin-next" "16.4.1"
+    "@next/eslint-plugin-next" "16.4.2"
     eslint-import-resolver-node "^0.3.6"
     eslint-import-resolver-typescript "^3.5.2"
     eslint-plugin-import "^2.32.0"
